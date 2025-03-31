@@ -15,6 +15,7 @@ app.use(express.urlencoded( { extended: true } ));
 app.use(express.static('public'));
 app.use(expressLayouts);
 
+// Using cookie-parser middleware with a secret key
 app.use(cookieParser('CookingBlogSecure'));
 app.use(session({
   secret: 'CookingBlogSecretSession',
